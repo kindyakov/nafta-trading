@@ -1,0 +1,38 @@
+:root {
+  --font-family: "Exo 2", sans-serif;
+
+  /* Colors from Figma */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark: #1c1c1c;
+  /* Main text */
+  --color-primary: #909eff;
+  /* Accent blue */
+  --color-bg-light: #f7f7f7;
+  /* Background sections */
+  --color-border: #e1e1e1;
+  /* Borders and lines */
+
+  --color-text: var(--color-dark);
+  --color-bg: var(--color-white);
+
+  /* Layout and Transitions */
+  --container-max-width: 1820px;
+  --transition-speed: 0.3s;
+  --transition-ease: ease;
+
+  /* Header Height default */
+  --header-height: 96px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --header-height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+}
