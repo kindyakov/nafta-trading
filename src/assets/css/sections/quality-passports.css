@@ -1,5 +1,5 @@
 .quality-passports {
-  padding-block: 140px;
+  margin-top: 140px;
 }
 
 .quality-passports__container {
@@ -21,14 +21,14 @@
 }
 
 .quality-passports__text {
-  max-width: 690px;
+  max-width: 600px;
   font-weight: 400;
   font-size: 18px;
   line-height: 122%;
 }
 
 .quality-passports__actions {
-  margin-top: 54px;
+  margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,12 +37,12 @@
 
 .quality-passports__controls {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .quality-passports__control {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,11 +74,11 @@
   width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 9px;
+  gap: 32px;
+  padding-bottom: 10px;
   font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 120%;
   text-transform: uppercase;
   color: var(--color-primary);
