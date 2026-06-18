@@ -2,8 +2,7 @@
   <div class="header__container container">
     <div class="header__content">
       <a class="header__logo" href="/" aria-label="Nafta Trading">
-        <img src="../assets/images/header-logo-index.png" alt="Лого">
-        <!-- header-logo-dark.png -->
+        <img class="js-header-logo" src="../assets/images/header-logo-index.png" data-logo-light="../assets/images/header-logo-index.png" data-logo-dark="../assets/images/header-logo-dark.png" alt="Лого">
       </a>
 
       <div class="header__toolbar">
@@ -28,7 +27,7 @@
         <a href="tel:+79999999999" class="header__phone button" data-da=".header__menu-contacts, 1150, first">
           8 999 999 99 99
         </a>
-        <button class="header__cta button" data-da=".header__menu-contacts, 1150, last">
+        <button class="header__cta button" type="button" data-a11y-dialog-show="contact-modal" data-da=".header__menu-contacts, 1150, last">
           Свяжитесь с нами
         </button>
         <button class="header__burger" aria-label="Открыть меню" data-burger>

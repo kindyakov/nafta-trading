@@ -3,6 +3,7 @@ export const initHeader = () => {
   const burger = document.querySelector('[data-burger]');
   const menu = document.querySelector('[data-menu]');
   const closeButtons = document.querySelectorAll('[data-menu-close]');
+  const logo = header.querySelector('.js-header-logo');
 
   if (!header) return;
 
@@ -42,10 +43,20 @@ export const initHeader = () => {
 
   // Handle header scroll style toggling
   const handleScroll = () => {
-    if (window.scrollY > 20) {
+    const isScrolled = window.scrollY > 20;
+
+    if (isScrolled) {
       header.classList.add('header--scrolled');
     } else {
       header.classList.remove('header--scrolled');
+    }
+
+    if (!logo) return;
+
+    const nextLogoSrc = isScrolled ? logo.dataset.logoDark : logo.dataset.logoLight;
+
+    if (nextLogoSrc && logo.getAttribute('src') !== nextLogoSrc) {
+      logo.setAttribute('src', nextLogoSrc);
     }
   };
 
@@ -53,4 +64,3 @@ export const initHeader = () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 };
-

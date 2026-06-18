@@ -96,3 +96,7 @@
     color: var(--color-dark);
   }
 }
+
+.wrap-err {
+  position: relative;
+}

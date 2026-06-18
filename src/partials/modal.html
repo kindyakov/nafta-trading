@@ -1,17 +1,17 @@
-<div
-  class="dialog-container"
-  id="contact-modal"
-  aria-hidden="true"
-  data-a11y-dialog="contact-modal"
->
+<div class="dialog-container" id="contact-modal" aria-hidden="true" data-a11y-dialog="contact-modal">
   <div class="dialog-overlay" data-a11y-dialog-hide></div>
   <div class="dialog-content" role="document">
     <button type="button" class="dialog-close" data-a11y-dialog-hide aria-label="Закрыть окно">
       <span aria-hidden="true">&times;</span>
     </button>
-    <h2 class="dialog-title title-h2">Обсудим сотрудничество?</h2>
+    <div class="dialog-head">
+      <span class="dialog-eyebrow">Заявка на поставку</span>
+      <h2 class="dialog-title title-h2">Обсудим сотрудничество?</h2>
+      <p class="dialog-text">Оставьте контакты, и мы быстро уточним продукт, объем и направление поставки.</p>
+    </div>
 
-    <form class="dialog-form contact-form js-contact-form" action="#" method="post" enctype="multipart/form-data" novalidate>
+    <form class="dialog-form contact-form contact-form--modal js-contact-form" action="#" method="post"
+      enctype="multipart/form-data" novalidate>
       <label class="contact-form__field contact-form__field--wide">
         <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя">
       </label>
@@ -40,11 +40,13 @@
       </label>
 
       <div class="contact-form__bottom">
-        <label class="contact-form__privacy">
-          <input class="contact-form__checkbox" type="checkbox" name="privacy">
-          <span class="contact-form__checkbox-mark" aria-hidden="true"></span>
-          <span>Согласен на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
-        </label>
+        <div class="wrap-err">
+          <label class="contact-form__privacy">
+            <input class="contact-form__checkbox" type="checkbox" name="privacy">
+            <span class="contact-form__checkbox-mark" aria-hidden="true"></span>
+            <span>Согласен на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
+          </label>
+        </div>
 
         <button class="contact-form__submit button-two" type="submit">
           <span>Отправить данные</span>

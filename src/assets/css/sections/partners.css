@@ -70,6 +70,14 @@
     filter var(--transition-speed) var(--transition-ease);
 }
 
+.partners__item-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .partners__item,
   .partners__item::before,

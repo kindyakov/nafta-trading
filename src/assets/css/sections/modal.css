@@ -17,7 +17,9 @@
 .dialog-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(144, 158, 255, 0.34), transparent 30%),
+    rgba(10, 10, 10, 0.62);
   animation: dialogOverlayIn 0.26s ease forwards;
   backdrop-filter: blur(8px);
 }
@@ -26,10 +28,13 @@
   position: relative;
   max-height: min(90vh, 760px);
   overflow-y: auto;
-  width: min(100%, 820px);
-  padding: 34px;
+  width: min(100%, 980px);
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  padding: 0;
   border-radius: 8px;
   background: var(--color-white);
+  box-shadow: 0 32px 90px rgba(28, 28, 28, 0.28);
   z-index: 1001;
   animation: dialogContentIn 0.34s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -46,8 +51,8 @@
   position: absolute;
   top: 18px;
   right: 18px;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -71,14 +76,85 @@
   }
 }
 
+.dialog-head {
+  min-height: 100%;
+  padding: 38px 32px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.dialog-eyebrow {
+  display: block;
+  margin-bottom: 28px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .dialog-title {
-  margin-bottom: 34px;
-  padding-right: 48px;
+  color: currentColor;
+  font-size: 48px;
+  line-height: 104%;
+  overflow-wrap: anywhere;
+}
+
+.dialog-text {
+  margin-top: 28px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
 }
 
 .dialog-form {
   width: 100%;
-  padding: 0;
+  padding: 92px 34px 34px;
+  border-radius: 0;
+}
+
+.contact-form--modal .contact-form__field {
+  margin-bottom: 28px;
+}
+
+.contact-form--modal .contact-form__textarea {
+  min-height: 96px;
+}
+
+.contact-form--modal .contact-form__file {
+  border: 1px solid transparent;
+  transition:
+    border-color var(--transition-speed) var(--transition-ease),
+    background-color var(--transition-speed) var(--transition-ease);
+
+  &:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+  }
+}
+
+.contact-form--modal .contact-form__bottom {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.contact-form--modal .contact-form__submit {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+
+  span {
+    padding-right: 0;
+  }
+
+  svg {
+    margin-left: 0;
+    margin-top: 4px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -87,7 +163,32 @@
   }
 
   .dialog-content {
+    grid-template-columns: 1fr;
+    background: var(--color-white);
+  }
+
+  .dialog-head {
+    padding: 24px 64px 20px 24px;
+    color: var(--color-dark);
+    background-color: var(--color-bg-light);
+  }
+
+  .dialog-title {
+    font-size: 34px;
+  }
+
+  .dialog-eyebrow {
+    margin-bottom: 16px;
+    color: rgba(28, 28, 28, 0.5);
+  }
+
+  .dialog-form {
+    width: 100%;
     padding: 24px;
+  }
+
+  .contact-form--modal .contact-form__submit {
+    min-width: 100%;
   }
 }
 
