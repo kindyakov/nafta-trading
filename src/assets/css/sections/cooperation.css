@@ -194,6 +194,7 @@
 .contact-form__submit {
   min-width: 230px;
   min-height: 64px;
+  position: relative;
 }
 
 .contact-form.is-loading {
@@ -201,7 +202,33 @@
 }
 
 .contact-form__submit.is-busy {
-  opacity: 0.72;
+  svg {
+    opacity: 0;
+  }
+
+  .loader {
+    opacity: 1;
+  }
+}
+
+.loader {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 18px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-right-color: var(--color-white);
+  opacity: 0;
+  pointer-events: none;
+  animation: loaderSpin 1s infinite linear;
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .just-validate-error-label {

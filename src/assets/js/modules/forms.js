@@ -46,6 +46,11 @@ const initPhoneMask = (form) => {
 
 const getSubmitUrl = () => window.naftaTradingAjax?.url;
 
+const wait = (delay = 2000) =>
+  new Promise((resolve) => {
+    window.setTimeout(resolve, delay);
+  });
+
 const submitForm = async (form) => {
   const submitUrl = getSubmitUrl();
 
@@ -148,6 +153,7 @@ export const initForms = () => {
 
         try {
           await submitForm(form);
+          await wait();
 
           form.reset();
 
