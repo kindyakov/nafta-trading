@@ -6,10 +6,53 @@
 >
   <div class="dialog-overlay" data-a11y-dialog-hide></div>
   <div class="dialog-content" role="document">
-    <button type="button" class="dialog-close" data-a11y-dialog-hide aria-label="Close dialog">
-      &times;
+    <button type="button" class="dialog-close" data-a11y-dialog-hide aria-label="Закрыть окно">
+      <span aria-hidden="true">&times;</span>
     </button>
-    <h2 class="dialog-title">Связаться с нами</h2>
-    <!-- Modal content / Form placeholder -->
+    <h2 class="dialog-title title-h2">Обсудим сотрудничество?</h2>
+
+    <form class="dialog-form contact-form js-contact-form" action="#" method="post" enctype="multipart/form-data" novalidate>
+      <label class="contact-form__field contact-form__field--wide">
+        <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя">
+      </label>
+
+      <div class="contact-form__row">
+        <label class="contact-form__field">
+          <input class="contact-form__input js-phone-input" type="tel" name="phone" placeholder="Телефон">
+        </label>
+        <label class="contact-form__field">
+          <input class="contact-form__input" type="email" name="email" placeholder="Email">
+        </label>
+      </div>
+
+      <label class="contact-form__field contact-form__field--wide">
+        <input class="contact-form__input" type="text" name="company" placeholder="Название компании">
+      </label>
+
+      <label class="contact-form__field contact-form__field--message">
+        <textarea class="contact-form__textarea" name="message" placeholder="Сообщение"></textarea>
+      </label>
+
+      <label class="contact-form__file">
+        <input class="contact-form__file-input" type="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx">
+        <span class="contact-form__file-text">Прикрепить файл (PDF, DOCX, XLSX)</span>
+        <span class="contact-form__file-name" data-file-name>Файл не выбран</span>
+      </label>
+
+      <div class="contact-form__bottom">
+        <label class="contact-form__privacy">
+          <input class="contact-form__checkbox" type="checkbox" name="privacy">
+          <span class="contact-form__checkbox-mark" aria-hidden="true"></span>
+          <span>Согласен на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
+        </label>
+
+        <button class="contact-form__submit button-two" type="submit">
+          <span>Отправить данные</span>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
   </div>
 </div>

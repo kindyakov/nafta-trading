@@ -110,23 +110,7 @@
 }
 
 .about__link {
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  gap: 40px;
-  padding-bottom: 10px;
-  font-family: var(--second-family);
-  font-weight: 500;
-  font-size: 16px;
   line-height: 125%;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  border-bottom: 1px solid currentColor;
-  transition: color var(--transition-speed) var(--transition-ease);
-
-  &:hover {
-    color: var(--color-dark);
-  }
 }
 
 @media (max-width: 1200px) {

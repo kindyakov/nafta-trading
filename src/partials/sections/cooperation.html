@@ -1,0 +1,62 @@
+<section class="cooperation" id="cooperation">
+  <div class="cooperation__container container">
+    <img class="cooperation__bg" src="../assets/images/cooperation-bg.png" alt="Фото" aria-hidden="true">
+    <div class="cooperation__body">
+      <div class="cooperation__content">
+        <h2 class="cooperation__title title-h2">
+          Обсудим<br>
+          сотрудничество?
+        </h2>
+        <p class="cooperation__text">
+          Оставьте контакты, и мы уточним нужный продукт, объем партии, и направление поставки, после чего подготовим
+          для
+          вас актуальные условия
+        </p>
+      </div>
+
+      <form class="cooperation__form contact-form js-contact-form" enctype="multipart/form-data" novalidate>
+        <label class="contact-form__field contact-form__field--wide">
+          <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя">
+        </label>
+
+        <div class="contact-form__row">
+          <label class="contact-form__field">
+            <input class="contact-form__input js-phone-input" type="tel" name="phone" placeholder="Телефон">
+          </label>
+          <label class="contact-form__field">
+            <input class="contact-form__input" type="email" name="email" placeholder="Email">
+          </label>
+        </div>
+
+        <label class="contact-form__field contact-form__field--wide">
+          <input class="contact-form__input" type="text" name="company" placeholder="Название компании">
+        </label>
+
+        <label class="contact-form__field contact-form__field--message">
+          <textarea class="contact-form__textarea" name="message" placeholder="Сообщение"></textarea>
+        </label>
+
+        <label class="contact-form__file">
+          <input class="contact-form__file-input" type="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx">
+          <span class="contact-form__file-text">Прикрепить файл (PDF, DOCX, XLSX)</span>
+          <span class="contact-form__file-name" data-file-name>Файл не выбран</span>
+        </label>
+
+        <div class="contact-form__bottom">
+          <label class="contact-form__privacy">
+            <input class="contact-form__checkbox" type="checkbox" name="privacy">
+            <span class="contact-form__checkbox-mark" aria-hidden="true"></span>
+            <span>Согласен на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
+          </label>
+
+          <button class="contact-form__submit button-two" type="submit">
+            <span>Отправить данные</span>
+            <svg width="24" height="24" aria-hidden="true">
+              <use href="#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

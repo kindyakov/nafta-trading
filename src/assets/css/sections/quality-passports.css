@@ -66,26 +66,6 @@
   rotate: 180deg;
 }
 
-.quality-passports__all {
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  gap: 32px;
-  padding-bottom: 10px;
-  font-family: var(--second-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  border-bottom: 1px solid currentColor;
-  transition: color var(--transition-speed) var(--transition-ease);
-
-  &:hover {
-    color: var(--color-dark);
-  }
-}
-
 .quality-passports__slider {
   margin-top: 34px;
 }
