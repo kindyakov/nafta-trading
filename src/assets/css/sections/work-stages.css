@@ -32,6 +32,7 @@
 
 .work-stages__line-fill {
   position: absolute;
+  transform: translateX(-2px);
   top: 0;
   left: 0;
   width: 5px;

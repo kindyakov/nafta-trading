@@ -8,11 +8,6 @@
 @import './base.css';
 @import './common.css';
 
-@import './sections/header.css';
-@import './sections/footer.css';
-@import './sections/modal.css';
-
-
 @import './sections/hero.css';
 @import './sections/about.css';
 @import './sections/our-products.css';
@@ -24,3 +19,7 @@
 @import './sections/news.css';
 @import './sections/cooperation.css';
 @import './sections/services.css';
+
+@import './sections/header.css';
+@import './sections/footer.css';
+@import './sections/modal.css';
