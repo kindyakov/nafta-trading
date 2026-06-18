@@ -63,9 +63,11 @@ This project uses `npm` as the package manager. Ensure Node.js (version 18+) is 
 ### Starting the Development Environment
 
 Run the following command to start Parcel watchers and the local development server:
+
 ```bash
 npm run dev
 ```
+
 - **Local Dev Server URL**: `http://localhost:1234`
 - **Port Conflict**: If port `1234` is already in use, the dev server script will fail with `EADDRINUSE`. Ensure no other processes are running on port `1234`.
 - **Live Reload**: The dev server injects a live-reload script and automatically refreshes when HTML, CSS, JS, or assets change.
@@ -73,6 +75,7 @@ npm run dev
 ### Formatting & Linting
 
 All files are formatted using Prettier.
+
 - **Format code**:
   ```bash
   npm run format
@@ -87,13 +90,17 @@ All files are formatted using Prettier.
 ## Key Custom Utilities
 
 ### 1. Dynamic Adapt (DOM Reordering)
+
 We use a custom responsive utility in [dynamicAdapt.js](file:///d:/Developer/Kwork/nafta_trading/src/assets/js/modules/dynamicAdapt.js) to dynamically move elements inside the DOM based on viewport size.
-- **Usage**: Add `data-da="[destination-selector], [breakpoint], [order]"` to the element.
-- **Example**: `data-da=".header__menu-body, 1150, first"` moves the element to `.header__menu-body` when viewport width is `<= 1150px` as the first child.
+
+- **Usage**: Add `data-da="[destination-selector],[breakpoint],[order]"` to the element.
+- **Example**: `data-da=".header__menu-body,1150,first"` moves the element to `.header__menu-body` when viewport width is `<= 1150px` as the first child.
 
 ### 2. PostHTML Includes
+
 We use `posthtml-include` to insert partials into main pages.
-- **Syntax**: 
+
+- **Syntax**:
   ```html
   <include src="../partials/header.html" locals='{"header_class": ""}'></include>
   ```
@@ -114,6 +121,7 @@ We use `posthtml-include` to insert partials into main pages.
 3. **CSS Conventions**:
    - Use BEM (Block, Element, Modifier) naming conventions (e.g., `.header__burger--active`).
    - Group component styles in `src/assets/css/sections/` and import them in `src/assets/css/index.css`.
+   - Use CSS Nesting format for all pseudo-classes (`:hover`, `:active`, `:focus`), pseudo-elements (`::before`, `::after`), modifiers (`&--modifier`), nested sub-selectors, and media queries (nest `@media` rules directly inside the selector block).
 
 4. **JavaScript Conventions**:
    - Modules should export initialization functions (e.g., `initHeader()`, `initModal()`).
@@ -124,10 +132,13 @@ We use `posthtml-include` to insert partials into main pages.
 ## Build & Production Deployment
 
 To compile and optimize assets for production:
+
 ```bash
 npm run build
 ```
+
 This runs the full build sequence:
+
 1. `npm run build:css` — Compiles CSS using Parcel and outputs to `dist/css/`.
 2. `npm run build:js` — Bundles ESM code using Parcel and outputs to `dist/js/`.
 3. `npm run build:assets` — Copies static assets (images, fonts, videos) to `dist/`.
