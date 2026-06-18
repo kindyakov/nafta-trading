@@ -1,5 +1,5 @@
 .reviews {
-  padding-block: 120px 140px;
+  margin-top: 140px;
 }
 
 .reviews__container {
@@ -8,22 +8,18 @@
   gap: 20px;
 }
 
-.reviews__heading {
-  padding-right: 48px;
-}
-
 .reviews__content {
   min-width: 0;
 }
 
 .reviews__controls {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .reviews__control {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +48,7 @@
 }
 
 .reviews__slider {
-  margin-top: 54px;
+  margin-top: 48px;
 }
 
 .reviews__item {
@@ -60,76 +56,41 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 36px;
 }
 
 .reviews__company {
   font-weight: 500;
   font-size: 18px;
-  line-height: 122%;
+  line-height: 144%;
   text-transform: uppercase;
 }
 
 .reviews__person {
-  margin-top: 26px;
+  margin-top: 12px;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 125%;
+  font-size: 18px;
+  line-height: 122%;
 }
 
 .reviews__role {
-  margin-top: 5px;
+  margin-top: 4px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
-  color: rgba(28, 28, 28, 0.45);
+  font-size: 18px;
+  line-height: 122%;
+  color: #8e8e8e;
 }
 
 .reviews__text {
-  margin-top: 34px;
+  margin-top: 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 122%;
 }
 
 .reviews__date {
-  margin-top: 34px;
-  font-family: var(--second-family);
+  margin-top: 24px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 120%;
-  color: rgba(28, 28, 28, 0.45);
-}
-
-@media (max-width: 1100px) {
-  .reviews {
-    padding-block: 100px;
-  }
-
-  .reviews__container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .reviews__heading {
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .reviews {
-    padding-block: 72px 90px;
-  }
-
-  .reviews__slider {
-    margin-top: 34px;
-  }
-
-  .reviews__item {
-    padding-right: 0;
-  }
-
-  .reviews__text {
-    font-size: 16px;
-  }
+  font-size: 16px;
+  line-height: 40%;
+  color: #8e8e8e;
 }
