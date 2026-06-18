@@ -1,4 +1,4 @@
-@import '../../../node_modules/swiper/swiper.css';
+@import '../../../node_modules/swiper/swiper-bundle.css';
 @import '../../../node_modules/accordion-js/dist/accordion.min.css';
 @import '../../../node_modules/aos/dist/aos.css';
 @import '../../../node_modules/toastify-js/src/toastify.css';
@@ -14,3 +14,10 @@
 
 
 @import './sections/hero.css';
+@import './sections/about.css';
+@import './sections/our-products.css';
+@import './sections/work-stages.css';
+@import './sections/our-advantages.css';
+@import './sections/quality-passports.css';
+@import './sections/partners.css';
+@import './sections/reviews.css';

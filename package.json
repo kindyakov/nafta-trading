@@ -38,6 +38,7 @@
     "a11y-dialog": "^8.1.5",
     "accordion-js": "^3.4.1",
     "aos": "^2.3.4",
+    "countup.js": "^2.10.0",
     "imask": "^7.6.1",
     "just-validate": "^4.3.0",
     "nouislider": "^15.8.1",

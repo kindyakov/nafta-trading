@@ -5,6 +5,9 @@ import { initSlider } from './modules/slider.js';
 import { initAccordions } from './modules/accordion.js';
 import { initAOS } from './modules/aos.js';
 import { initForms } from './modules/forms.js';
+import { initCounters } from './modules/counters.js';
+import { initAboutImages } from './modules/aboutImages.js';
+import { initWorkStages } from './modules/workStages.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   useDynamicAdapt();
@@ -14,4 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initAOS();
   initForms();
+  initCounters();
+  initAboutImages();
+  initWorkStages();
 });

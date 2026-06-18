@@ -126,6 +126,8 @@ We use `posthtml-include` to insert partials into main pages.
 4. **JavaScript Conventions**:
    - Modules should export initialization functions (e.g., `initHeader()`, `initModal()`).
    - Add checks to prevent runtime errors when elements are not present on a page (e.g., `if (!element) return;`).
+   - Do not use BEM/CSS styling classes as JavaScript selectors or logic hooks. Add separate `js-*` classes for JavaScript behavior (e.g., `js-count-up`, `js-products-slider`) and keep styling classes reserved for CSS.
+   - Do not toggle styling classes from JavaScript. For visual state driven by JS, prefer semantic attributes such as `aria-current`, `aria-expanded`, or dedicated data attributes that CSS can target.
 
 ---
 

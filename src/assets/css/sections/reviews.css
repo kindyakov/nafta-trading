@@ -1,0 +1,135 @@
+.reviews {
+  padding-block: 120px 140px;
+}
+
+.reviews__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.reviews__heading {
+  padding-right: 48px;
+}
+
+.reviews__content {
+  min-width: 0;
+}
+
+.reviews__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.reviews__control {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-dark);
+  transition:
+    color var(--transition-speed) var(--transition-ease),
+    border-color var(--transition-speed) var(--transition-ease),
+    background-color var(--transition-speed) var(--transition-ease);
+
+  &:hover {
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+}
+
+.reviews__control:first-child svg {
+  rotate: 180deg;
+}
+
+.reviews__slider {
+  margin-top: 54px;
+}
+
+.reviews__item {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 36px;
+}
+
+.reviews__company {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122%;
+  text-transform: uppercase;
+}
+
+.reviews__person {
+  margin-top: 26px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 125%;
+}
+
+.reviews__role {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(28, 28, 28, 0.45);
+}
+
+.reviews__text {
+  margin-top: 34px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+}
+
+.reviews__date {
+  margin-top: 34px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: rgba(28, 28, 28, 0.45);
+}
+
+@media (max-width: 1100px) {
+  .reviews {
+    padding-block: 100px;
+  }
+
+  .reviews__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .reviews__heading {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews {
+    padding-block: 72px 90px;
+  }
+
+  .reviews__slider {
+    margin-top: 34px;
+  }
+
+  .reviews__item {
+    padding-right: 0;
+  }
+
+  .reviews__text {
+    font-size: 16px;
+  }
+}
